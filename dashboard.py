@@ -41,7 +41,7 @@ def load_data():
         engine="pyxlsb"
     )
 
-    demo = pd.read_csv("cleaned_demographics(1).csv")
+    demo = pd.read_csv("cleaned_demographics (1).csv")
 
     df["time"] = pd.to_datetime(df["time"], errors="coerce")
 

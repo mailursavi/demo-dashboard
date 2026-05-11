@@ -36,7 +36,11 @@ st.caption("Interactive CGM, insulin, meal, activity, sleep, predictive and pres
 # =========================
 @st.cache_data
 def load_data():
-    df = pd.read_csv("cleaned_hupa_diabetes_recent (1).xlsb")
+    df = pd.read_excel(
+        "cleaned_hupa_diabetes_recent (1).xlsb",
+        engine="pyxlsb"
+    )
+
     demo = pd.read_csv("cleaned_demographics(1).csv")
 
     df["time"] = pd.to_datetime(df["time"], errors="coerce")
@@ -46,8 +50,7 @@ def load_data():
 
     return df
 
-df = load_data()
-        
+df = load_data()        
 
 # =========================
 # PREPROCESSING

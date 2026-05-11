@@ -46,7 +46,7 @@ def load_data():
         df = df.merge(demo, on='patient_id', how='left')
 
     return df
-
+df = pd
 df = load_data()
 
         

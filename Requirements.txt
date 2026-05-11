@@ -3,7 +3,7 @@ pandas
 numpy
 plotly
 scikit-learn
-matplotlib
 scipy
-xgboost
-seaborn
+statsmodels
+openpyxl
+pyxlsb

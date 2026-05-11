@@ -64,8 +64,8 @@ margin-bottom:25px;">
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("cleaned_hupa_diabetes_recent (1)(2).csv")
-    demo = pd.read_csv("cleaned_demographics (1)(1).csv")
+    df = pd.read_excel("cleaned_hupa_diabetes_recent (1).xlsb")
+    demo = pd.read_csv("cleaned_demographics (1).csv")
 
     df["time"] = pd.to_datetime(df["time"], errors="coerce")
 

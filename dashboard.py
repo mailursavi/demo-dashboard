@@ -60,8 +60,8 @@ df["time"] = pd.to_datetime(df["time"], errors="coerce")
 df = df.dropna(subset=["time", "patient_id", "glucose"])
 df = df.sort_values(["patient_id", "time"])
 
-if demo is not None:
-    df = df.merge(demo, on="patient_id", how="left")
+# if demo is not None:
+   #  df = df.merge(demo, on="patient_id", how="left")
 
 bolus_col = "bolus_volume_delivered"
 if bolus_col not in df.columns:

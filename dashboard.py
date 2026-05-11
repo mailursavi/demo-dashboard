@@ -36,19 +36,17 @@ st.caption("Interactive CGM, insulin, meal, activity, sleep, predictive and pres
 # =========================
 @st.cache_data
 def load_data():
+    df = pd.read_csv("cleaned_hupa_diabetes_recent (1)(1).csv")
+    demo = pd.read_csv("cleaned_demographics(1).csv")
 
-    df = pd.read_excel("cleaned_hupa_diabetes_recent (1).xlsb")
-    demo = pd.read_csv("cleaned_demographics(1).csv")
+    df["time"] = pd.to_datetime(df["time"], errors="coerce")
 
-    df['time'] = pd.to_datetime(df['time'])
+    if "patient_id" in demo.columns:
+        df = df.merge(demo, on="patient_id", how="left")
 
-    if 'patient_id' in demo.columns:
-        df = df.merge(demo, on='patient_id', how='left')
+    return df
 
-    return df
-df = pd
 df = load_data()
-
         
 
 # =========================

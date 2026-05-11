@@ -1,0 +1,26 @@
+patient_id,age,gender,race,average_sleep_duration_hrs,sleep_quality_1-10,pct_with_sleep_disturbances
+HUPA0001P,34,Male,Other,6.3,4.5,80
+HUPA0002P,49,Male,Hispanic,6.6,4.4,40
+HUPA0003P,64,Male,Black,5.3,5.2,70
+HUPA0004P,34,Female,Native American,5.2,6.9,60
+HUPA0005P,49,Male,Native American,5.8,7.9,30
+HUPA0006P,35,Male,White,6.6,4.2,60
+HUPA0007P,67,Male,Native American,7.1,6.0,80
+HUPA0009P,65,Female,Other,6.6,4.6,40
+HUPA0010P,22,Male,Asian,7.1,5.5,50
+HUPA0011P,63,Female,Other,5.6,4.7,60
+HUPA0014P,56,Male,White,6.4,4.6,30
+HUPA0015P,33,Female,Other,6.2,6.5,50
+HUPA0016P,46,Male,Black,5.0,4.6,40
+HUPA0017P,64,Female,Hispanic,5.8,7.3,50
+HUPA0018P,20,Female,Native American,5.9,7.1,80
+HUPA0019P,46,Male,Black,5.3,7.1,30
+HUPA0020P,29,Male,White,5.4,7.9,70
+HUPA0021P,30,Female,Black,5.7,5.4,70
+HUPA0022P,35,Male,Other,7.2,7.5,30
+HUPA0023P,74,Female,Black,5.1,6.8,40
+HUPA0024P,53,Male,Asian,5.9,7.5,80
+HUPA0025P,44,Male,Native American,6.6,4.1,40
+HUPA0026P,33,Male,Hispanic,6.0,4.7,50
+HUPA0027P,60,Female,Black,5.5,5.9,60
+HUPA0028P,62,Male,Black,5.1,7.9,30

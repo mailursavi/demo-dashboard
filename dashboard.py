@@ -34,41 +34,22 @@ st.caption("Interactive CGM, insulin, meal, activity, sleep, predictive and pres
 # =========================
 # DATA LOADING
 # =========================
-
-st.sidebar.header("📂 Upload Data")
-
-diabetes_file = st.sidebar.file_uploader(
-    "Upload diabetes CGM CSV",
-    type=["xlsb"]
-)
-
-demo_file = st.sidebar.file_uploader(
-    "Upload demographics CSV",
-    type=["csv"]
-)
-
 @st.cache_data
-def load_data(diabetes_file, demo_file):
-    if diabetes_file is not None:
-        df = pd.read_csv(diabetes_file)
-    else:
-        df = pd.read_csv("cleaned_hupa_diabetes_recent (1).xlsb")
+def load_data():
 
-    if demo_file is not None:
-        demo = pd.read_csv(demo_file)
-    else:
-        try:
-            demo = pd.read_csv("cleaned_demographics(1).csv")
-        except:
-            demo = None
+    df = pd.read_excel("cleaned_hupa_diabetes_recent (1).xlsb")
+    demo = pd.read_csv("cleaned_demographics(1).csv")
 
-    return df, demo
+    df['time'] = pd.to_datetime(df['time'])
 
-try:
-    df, demo = load_data(diabetes_file, demo_file)
-except Exception as e:
-    st.error("Please upload your CSV files or place them in the same folder as app.py.")
-    st.stop()
+    if 'patient_id' in demo.columns:
+        df = df.merge(demo, on='patient_id', how='left')
+
+    return df
+
+df = load_data()
+
+        
 
 # =========================
 # PREPROCESSING
